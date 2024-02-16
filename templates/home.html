@@ -1,0 +1,61 @@
+{% extends "layout.html" %} 
+    {% block content %}
+    <div class="pleyerforimg">
+      <img style="height: 80%;width: 100%; " id="playimg" src="{{Topsongs[0]}}"/>
+      <h4 style="height: 19%;width: 100%;" id="currentname">{{Topnames[0]}}</h4>
+    </div>
+    <div class="left-info">
+        <div class="nav">
+              <p onclick="searchit('New songs')">New songs</p>
+              <p onclick="searchit(' Top songs')">Top Songs</p>
+              <p onclick="searchit('Tamil Vibe songs')">Vibe</p>
+              
+        </div>
+        <div  class="section">
+            <h2 id="Resultsection">Top Songs</h2>
+            <div id="dataContainer"></div>
+            
+            <div class="top-songs">
+              {% for song in range(topcount) %}
+                <div>
+                  <img src="{{Topsongs[song]}}"/>
+                  <div class="center-play">
+                    <p href="#">{{Topnames[song]}}</p>
+                    <button onclick="playit('{{songsurl1[song]}}','{{Topsongs[song]}}','{{Topnames[song]}}')" id="playthis">▶</button>
+                  </div>
+                </div>
+              {% endfor %}
+              
+            </div>
+            <h2>New Songs</h2>
+            <div class="new-songs">
+              {% for song in range(Newcount) %}
+                <div>
+                  <img src="{{Newsongs[song]}}"/>
+                  <div class="center-play">
+                    <p href="#">{{Newnames[song]}}</p>
+                    <button onclick="playit('{{songsurl2[song]}}','{{Newsongs[song]}}','{{Newnames[song]}}')" id="playthis">▶</button>
+                  </div>
+                </div>
+                
+              {% endfor %}
+            </div>
+            <div style="height: 20%;"></div>
+
+        </div>
+        <div class="nav" id="coverit">
+          <p onclick="searchit(' Top English songs')">English Play</p>
+          <p onclick="searchit(' tamil songs')">Tamil Songs</p>
+          <p onclick="searchit(' Top Hindi songs')">Hindi Songs</p>
+          
+      </div>
+    </div>
+    <div id="subplay">
+      <div id="doit"  class="player">
+        <audio controls class="custom-audio">
+          <source src="{{songsurl1[0]}}" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div id="myprofiledata"></div>
+    </div>
+    {% endblock %}

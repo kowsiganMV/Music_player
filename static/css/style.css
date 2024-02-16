@@ -1,0 +1,173 @@
+body {
+    font-size: 100%;
+    background-color: rgb(0, 0, 0);
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+body a{
+    text-decoration: none;
+}
+.nav-top ul li a:hover {
+    color: rgb(198, 197, 197);
+  }
+  
+  .nav-top ul li {
+    display: inline-block; /* Consistent with inline elements */
+    margin-right: 10%; /* Use padding for spacing */
+  }
+  .nav-top ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  
+  .search{
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
+}
+ 
+   
+  .player {
+    padding: 0%;
+    background-color: rgb(0, 0, 0);
+    height: 10%;
+    position: fixed;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+  }
+  
+  .nav,.section{
+      float: left; 
+      height: 80%;
+      box-sizing: border-box;
+  }
+.nav {       
+    height: 100%;    
+    width: 20%;             
+    background: #191919;
+}
+.section {
+  height: 80vh;
+    padding: 1px;
+    width: 60%;
+    color: white;
+    overflow-y:scroll;
+}
+.section::-webkit-scrollbar {
+  width: 2px;
+}
+.nav p{
+    background-color: #000000;
+    margin: 0%;
+    height: 5vh;
+    font-size: large;
+    padding: 2%;
+}
+.nav p:hover{
+    background-color: rgb(37, 37, 37);
+}
+.nav img{
+    width: 100%;
+    height: 35vh ;
+    position: relative;
+    bottom: 10%;
+}
+audio{
+    width: 100%; 
+  }
+
+.section h2{
+  margin: 0%;
+  height: 5vh;
+  padding: 2%;
+}
+
+  .new-songs ,.top-songs{
+    height: 30vh;
+    width: 100%;
+    border-radius: 2%;
+    display: flex;
+    flex-direction:row;
+    gap: 0.1%;
+    overflow-x:scroll;
+    background-color: #272727;
+  }
+  .top-songs::-webkit-scrollbar ,.new-songs::-webkit-scrollbar{ 
+    height: 2px;
+  }  
+  .top-songs div ,.new-songs div{
+    padding: 1%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 2px;
+  }
+  .center-play{
+    height: 20%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
+  }
+  .top-songs div img , .new-songs div img{
+    width: 9pc;
+    height: 80%;
+  }
+  .top-songs div p ,.new-songs div p{
+    margin: 0%;
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .center-play button ,.center-play button{
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(185, 102, 19);
+  }
+  .loading{
+    height: 20%; 
+    width: 20%; 
+    border-radius: 50%;
+    position: relative; 
+    left: 30%;
+  }
+
+.custom-audio {
+  background-color: #f2f2f2;
+}
+
+
+/* Style the volume slider */
+.custom-audio::-webkit-media-controls-volume-slider {
+  background-color: #ff6a00; 
+}
+
+.pleyerforimg{
+  color: #ff6a00;
+  background-color: #f2f2f2;
+  padding: 2px;
+  position: fixed;
+  height: 60%;
+  bottom: 10%;
+  left: 0%;
+  width: 20%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.About{
+  height: 75vh;
+}
+.About div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile{
+  border-radius: 50%;
+  object-fit: cover; 
+  height:75%;
+  width: 75%;
+  top: 0;
+  padding: 10px;
+}

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="{{url_for('static',filename='script/script.js')}}">
+      
+    </script>
+  </head>
+  <body>
+
+    <div class="nav-top">
+      <ul id="list">
+        <li >Home</li>
+        <li onclick="searchit('Today Tamil News polimer')">News</li>
+        <li onclick="searchit('Hollywood songs')" >Hollywood</li>
+        <li onclick="profilework()">About</li>
+        <li class="search">
+            <input id="searchInput" placeholder="search"/>
+            <button onclick="searchData()"><i class="fa fa-search"></i></button>
+          </li>
+      </ul>
+    </div>
+    <!-- Repeat your----------------------------=----------------------------- content as needed -->
+    {% block content %}{% endblock %}
+  </body>
+</html>
